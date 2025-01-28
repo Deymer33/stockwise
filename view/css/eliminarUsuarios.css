@@ -1,0 +1,87 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f9;
+}
+
+/* Estilo del encabezado */
+header {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, rgba(0,162,255,1) 0%, rgba(0,122,255,1) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding-left: 20px;
+}
+
+/* Estilo de la tabla */
+table {
+  width: 90%;
+  margin: 50px auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #00a2ff;
+  color: white;
+}
+
+thead th {
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+}
+
+tbody td {
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* Estilo de los botones */
+form input[type="submit"] {
+  background-color: #00a2ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 162, 255, 0.2);
+}
+
+form input[type="submit"]:hover {
+  background-color: #008ace;
+  transform: translateY(-2px);
+}
+
+/* Espaciado del contenido general */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
