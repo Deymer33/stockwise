@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\xampp\htdocs\pdo\prueba\config\conexion.php';
+require_once '../config/conexion.php';
 
 Class ListaUsuarios {
 

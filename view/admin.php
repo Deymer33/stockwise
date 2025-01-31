@@ -1,7 +1,6 @@
 <?php
-
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
-
+session_start();
+require_once '../auth/permisos.php';
 ControlAcceso::verificarAcceso('admin');
 ?>
 

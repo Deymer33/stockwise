@@ -18,9 +18,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['roll'] = $user->rol;  // Añadir el rol a la sesión
         
         if ($_SESSION['roll'] == 'admin') {
-            header("Location: view/menuTendero.php");//  aqui se debe conectar al archivo adminmenu.php pero aun no he trabajado ese modulo
+            header("Location: view/adminMenu.php");//  aqui se debe conectar al archivo adminmenu.php pero aun no he trabajado ese modulo
         } elseif ($_SESSION['roll'] == 'tendero') {
-            header("Location: ");
+            header("Location: view/menuTendero");
         } else {
             header("Location: view/menuMensajero.php");
         }

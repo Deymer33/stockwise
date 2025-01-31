@@ -1,9 +1,9 @@
 <?php 
-require_once 'C:\xampp\htdocs\pdo\prueba\model\model.eliminarUsuarios.php';
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
-
+session_start();
+require_once '../auth/permisos.php';
 ControlAcceso::verificarAcceso('admin');
 
+require_once '../model/model.eliminarUsuarios.php';
 $database = new Database();
 $db = $database->getConnection();
 
@@ -28,7 +28,7 @@ $lista = $eliminar->lista();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/PDO/prueba/view/css/eliminarUsuarios.css">
+    <link rel="stylesheet" href="./css/eliminarUsuarios.css">
     <title>eliminar usuarios</title>
 </head>
 <body>
