@@ -1,6 +1,7 @@
 <?php
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
-ControlAcceso::verificarAcceso('tendero');
+require_once '../config/conexion.php';
+require_once '../auth/permisos.php';
+ControlAcceso::verificarAcceso('admin');
 
 $database = new Database();
 $db = $database->getConnection();
@@ -13,7 +14,7 @@ $db = $database->getConnection();
 <head>
     <meta charset="UTF-8">
     <title>Formulario de Productos</title>
-    <link rel="stylesheet" href="http://localhost/PDO/prueba/view/css/ventas.css"> 
+    <link rel="stylesheet" href="./css/ventas.css"> 
 </head>
 
 <body>

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'C:\xampp\htdocs\pdo\prueba\config\conexion.php'; // Asegúrate de tener acceso a la conexión
+require_once '../config/conexion.php';// Asegúrate de tener acceso a la conexión
 
 class Exprirados {
 

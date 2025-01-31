@@ -1,8 +1,7 @@
 <?php
+require_once '../auth/permisos.php';
+ControlAcceso::verificarAcceso('admin');
 
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
-
-ControlAcceso::verificarAcceso('tendero');
 ?>
 <div id="container">
         <ul>

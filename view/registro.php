@@ -1,14 +1,14 @@
 <?php 
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
+require_once '../config/conexion.php';
+require_once '../auth/autenticacion.php';
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-
-$database = new Database();
-$db = $database->getConnection();
+    $database = new Database();
+    $db = $database->getConnection();
 
 $usuario = new Usuarios($db);
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($usuario)) {
         if (!empty($_POST['nombre_usuario']) && !empty($_POST['email']) && !empty($_POST['clave']) && !empty($_POST['rol'])) {
             $usuario->nombre_usuario = $_POST['nombre_usuario'];
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/PDO/prueba/view/css/login.css">
+    <link rel="stylesheet" href="./css/login.css">
     <title>Registro</title>
 </head>
 <body>

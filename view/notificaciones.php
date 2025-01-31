@@ -1,8 +1,8 @@
 <?php
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
-require_once 'C:\xampp\htdocs\pdo\prueba\model\model.notificaciones.php';
+require_once '../auth/permisos.php';
+require_once '../model/model.notificaciones.php';
 
-ControlAcceso::verificarAcceso('tendero');
+ControlAcceso::verificarAcceso('admin');
 
 
 $database = new Database();
@@ -20,7 +20,7 @@ $total_vencidos = $productos->numeroProductosVencidos();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/PDO/prueba/view/css/notificaciones.css">
+    <link rel="stylesheet" href="./css/notificaciones.css">
     <title>Document</title>
 </head>
 <body>
@@ -37,21 +37,21 @@ $total_vencidos = $productos->numeroProductosVencidos();
 </header>
 <div id="container">
     <ul>
-        <li><a href="http://localhost/PDO/prueba/view/productosVencidos.php">productos vencidos (<?php echo $total_vencidos; ?>)</a></li>
+        <li><a href="./productosVencidos.php">productos vencidos (<?php echo $total_vencidos; ?>)</a></li>
         <li><a href="#">productos dañados</a>
         <li><a href="#">productos agotados</a>
     </ul>
 
     <div id="report-buttons">
-        <form action="http://localhost/PDO/prueba/view/reporteVencido.php" method="post">
+        <form action="http://localhost/stockwise/view/reporteVencido.php" method="post">
             <input type="submit" value="Generar reporte vencidos">
         </form>
 
-        <form action="http://localhost/PDO/prueba/generarReporteDanados.php" method="post">
+        <form action="http://stockwise/generarReporteDanados.php" method="post">
             <input type="submit" value="Generar reporte dañados">
         </form>
 
-        <form action="http://localhost/PDO/prueba/generarReporteAgotados.php" method="post">
+        <form action="http://stockwiselhost/generarReporteAgotados.php" method="post">
             <input type="submit" value="Generar reporte agotados">
         </form>
     </div>

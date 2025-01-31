@@ -1,7 +1,6 @@
 <?php
 
-require_once 'autenticacion.php';
-require_once 'C:\xampp\htdocs\pdo\prueba\config\conexion.php';
+
 
 class ControlAcceso {
     public static function verificarAcceso($rolRequerido) {

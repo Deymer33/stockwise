@@ -1,8 +1,7 @@
 <?php
-require_once 'C:/xampp/htdocs/pdo/prueba/auth/permisos.php';
-require_once 'C:/xampp/htdocs/pdo/prueba/model/model.stock.php'; // Incluye el modelo
-
-ControlAcceso::verificarAcceso('tendero');
+require_once '../auth/permisos.php';
+ControlAcceso::verificarAcceso('admin');
+require_once '../model/model.stock.php'; // Incluye el modelo
 
 // Obtener la conexión a la base de datos
 $database = new Database();
@@ -20,7 +19,7 @@ $productos = $productoModel->obtenerProductos();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/PDO/prueba/view/css/productosVencidos.css">
+    <link rel="stylesheet" href="./css/productosVencidos.css">
     <title>inventario</title>
 </head>
 <body>
@@ -61,7 +60,7 @@ $productos = $productoModel->obtenerProductos();
         </table>
     </div>  
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 </html>                                     

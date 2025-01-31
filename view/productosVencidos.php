@@ -1,8 +1,8 @@
 <?php
-require_once 'C:\xampp\htdocs\pdo\prueba\auth\permisos.php';
-require_once 'C:\xampp\htdocs\pdo\prueba\model\model.productosVencidos.php';
+require_once '../auth/permisos.php';
+require_once '../model/model.productosVencidos.php';
 
-ControlAcceso::verificarAcceso('tendero');
+ControlAcceso::verificarAcceso('admin');
 
 $database = new Database();
 $db = $database->getConnection();
@@ -19,7 +19,7 @@ $productos_vencidos = $productos->productosVencidos();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost/PDO/prueba/view/css/productosVencidos.css">
+    <link rel="stylesheet" href="./css/productosVencidos.css">
     <title>Productos Vencidos</title>
 </head>
 <body>
