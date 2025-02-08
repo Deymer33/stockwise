@@ -1,7 +1,5 @@
 <?php
-
-
-
+session_start();
 class ControlAcceso {
     public static function verificarAcceso($rolRequerido) {
         // Verificar si ya existe una sesión antes de iniciarla

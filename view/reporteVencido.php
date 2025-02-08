@@ -2,7 +2,7 @@
 session_start();
 require_once '../model/model.productosVencidos.php';
 require_once '../auth/permisos.php';
-ControlAcceso::verificarAcceso('admin');
+ControlAcceso::verificarAcceso('tendero');
 
 $database = new Database();
 $db = $database->getConnection();
@@ -14,7 +14,7 @@ $productos_vencidos = $productos->productosVencidos();
 
 
 $fecha_creacion = date("d/m/Y"); 
-$nombre_usuario = $_SESSION['nombre_usuario'];
+$nombre_usuario = $_SESSION['email'];
 
 
 ob_start();

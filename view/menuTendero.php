@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../auth/permisos.php';
-ControlAcceso::verificarAcceso('admin');
+ControlAcceso::verificarAcceso('tendero');
 ?>
 
 

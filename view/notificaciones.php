@@ -2,7 +2,7 @@
 require_once '../auth/permisos.php';
 require_once '../model/model.notificaciones.php';
 
-ControlAcceso::verificarAcceso('admin');
+ControlAcceso::verificarAcceso('tendero');
 
 
 $database = new Database();

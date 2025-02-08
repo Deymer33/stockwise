@@ -1,7 +1,5 @@
 <?php 
-session_start();
-require_once '../auth/permisos.php';
-ControlAcceso::verificarAcceso('admin');
+
 require_once '../auth/autenticacion.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -1,7 +1,7 @@
 <?php
 require_once '../config/conexion.php';
 require_once '../auth/permisos.php';
-ControlAcceso::verificarAcceso('admin');
+ControlAcceso::verificarAcceso('tendero');
 
 $database = new Database();
 $db = $database->getConnection();

@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once './auth/autenticacion.php';
 
 
@@ -20,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_SESSION['roll'] == 'admin') {
             header("Location: view/adminMenu.php");//  aqui se debe conectar al archivo adminmenu.php pero aun no he trabajado ese modulo
         } elseif ($_SESSION['roll'] == 'tendero') {
-            header("Location: view/menuTendero");
+            header("Location: view/menuTendero.php");
         } else {
             header("Location: view/menuMensajero.php");
         }
