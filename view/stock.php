@@ -1,17 +1,9 @@
 <?php
-require_once '../auth/permisos.php';
-ControlAcceso::verificarAcceso('tendero');
-require_once '../model/model.stock.php'; // Incluye el modelo
+require_once '../controller/stock.controller.php';
 
-// Obtener la conexión a la base de datos
-$database = new Database();
-$db = $database->getConnection();
+$controller = new StockController();
+$productos = $controller->stock();
 
-// Instanciar el modelo Producto
-$productoModel = new Producto($db);
-
-// Obtener los productos
-$productos = $productoModel->obtenerProductos();
 ?>
 
 <!DOCTYPE html>
@@ -59,8 +51,6 @@ $productos = $productoModel->obtenerProductos();
             </tbody>
         </table>
     </div>  
-
     <script src="./script.js"></script>
-
 </body>
 </html>                                     

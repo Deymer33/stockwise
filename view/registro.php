@@ -1,35 +1,3 @@
-<?php 
-
-require_once '../auth/autenticacion.php';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $database = new Database();
-    $db = $database->getConnection();
-
-$usuario = new Usuarios($db);
-
-    if (isset($usuario)) {
-        if (!empty($_POST['nombre_usuario']) && !empty($_POST['email']) && !empty($_POST['clave']) && !empty($_POST['rol'])) {
-            $usuario->nombre_usuario = $_POST['nombre_usuario'];
-            $usuario->email = $_POST['email'];
-            $usuario->clave = password_hash($_POST['clave'], PASSWORD_BCRYPT); // Encriptar la contraseña
-            $usuario->rol = $_POST['rol'];
-
-            if ($usuario->registrar()) {
-                echo "Usuario registrado correctamente.";
-            } else {
-                echo "Error al registrar el usuario.";
-            }
-        } else {
-            echo "Todos los campos son obligatorios.";
-        }
-    } else {
-        echo "Error: No se pudo crear la instancia de usuario.";
-    }
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +14,7 @@ $usuario = new Usuarios($db);
     </header>
 
     <div>
-    <form method="POST" action="">
+    <form method="POST" action="index.php?action=registrar">
         <label for="nombre_usuario">Nombre de Usuario</label><br>
         <input type="text" id="nombre_usuario" name="nombre_usuario" required>
         <br>
