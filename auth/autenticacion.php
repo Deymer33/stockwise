@@ -2,7 +2,6 @@
 
 require_once './config/conexion.php';
 
-
 class Usuarios {
 
     private $conn;
@@ -63,7 +62,6 @@ class Usuarios {
             return false;
         }
     }
-    
-    
+      
 }
     

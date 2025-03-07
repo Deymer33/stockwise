@@ -62,7 +62,7 @@ class UsuariosController {
                     if($_SESSION['rol'] == 'admin'){
                         header("location: adminMenu.php");
                     } elseif ($_SESSION['rol'] == 'tendero'){
-                        header("location: view/menuTendero.php"); 
+                        header("location: view/tendero/menuTendero.php"); 
                     } elseif ($_SESSION['rol'] == 'mensajero'){
                         header("locatio: menudomicilio.php");
                     } else {

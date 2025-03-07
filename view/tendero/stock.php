@@ -1,5 +1,5 @@
 <?php
-require_once '../controller/stock.controller.php';
+require_once __DIR__ . '/../../controller/stock.controller.php';
 
 $controller = new StockController();
 $productos = $controller->stock();
@@ -11,7 +11,7 @@ $productos = $controller->stock();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/productosVencidos.css">
+    <link rel="stylesheet" href="../css/productosVencidos.css">
     <title>inventario</title>
 </head>
 <body>
@@ -51,6 +51,6 @@ $productos = $controller->stock();
             </tbody>
         </table>
     </div>  
-    <script src="./script.js"></script>
+    <script src="../script/script.js"></script>
 </body>
 </html>                                     

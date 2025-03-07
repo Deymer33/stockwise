@@ -11,7 +11,7 @@ class ControlAcceso {
                 exit();
             }
         
-        if (!isset($_SESSION['roll']) || $_SESSION['roll'] !== $rolRequerido) {
+        if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== $rolRequerido) {
             header("Location: error.php");
             exit();
         }

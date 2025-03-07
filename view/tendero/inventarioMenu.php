@@ -1,5 +1,5 @@
 <?php
-require_once '../controller/inventario.controller.php';
+require_once __DIR__ . '/../../controller/inventario.controller.php';
 
 $controlador = new MenuInventarioController();
 $vista = $controlador->mostrarVista();

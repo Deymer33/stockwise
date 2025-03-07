@@ -1,9 +1,8 @@
 <?php
-require_once '../auth/permisos.php';
-require_once '../model/model.notificaciones.php'; 
+require_once __DIR__ . '../../auth/permisos.php';
+require_once __DIR__ . '../../model/model.stock.php';
 
 class StockController {
-    private $model;
 
     public function __construct(){
         ControlAcceso::verificarAcceso('tendero');

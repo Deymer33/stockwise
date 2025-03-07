@@ -1,16 +1,12 @@
 <?php
 session_start();
-require_once '../model/model.productosVencidos.php';
-require_once '../auth/permisos.php';
-ControlAcceso::verificarAcceso('tendero');
+require_once __DIR__ . '/../../controller/productosVencidos.controller.php';
 
-$database = new Database();
-$db = $database->getConnection();
 
-// Consulta para obtener los productos vencidos
-$productos = new Exprirados($db);
 
-$productos_vencidos = $productos->productosVencidos();
+$productos = new ProductosVencidosController();
+
+$productos_vencidos = $productos->reporteVencido();
 
 
 $fecha_creacion = date("d/m/Y"); 
@@ -24,7 +20,7 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reporteVencido.css">
+    <link rel="stylesheet" href="../css/reporteVencido.css">
     <title>Reporte de Productos Vencidos</title>
 </head>
 <body>
@@ -65,7 +61,7 @@ ob_start();
 $html = ob_get_clean();
 //echo $html;
  
-require_once '../lib/dompdf/autoload.inc.php';
+require_once __DIR__ . '/../../lib/dompdf/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 

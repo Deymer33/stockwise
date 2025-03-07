@@ -1,16 +1,8 @@
 <?php
-require_once '../auth/permisos.php';
-require_once '../model/model.notificaciones.php';
+require_once __DIR__ . '/../../controller/notificaciones.controller.php';
 
-ControlAcceso::verificarAcceso('tendero');
-
-
-$database = new Database();
-$db = $database->getConnection();
-
-$productos = new Notificacion($db);
-$total_vencidos = $productos->numeroProductosVencidos();
-
+$productos = new NotificacionController();
+$total_vencidos = $productos->notificacion();
 
 ?>
 
@@ -20,7 +12,7 @@ $total_vencidos = $productos->numeroProductosVencidos();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/notificaciones.css">
+    <link rel="stylesheet" href="../css/notificaciones.css">
     <title>Document</title>
 </head>
 <body>
@@ -43,7 +35,7 @@ $total_vencidos = $productos->numeroProductosVencidos();
     </ul>
 
     <div id="report-buttons">
-        <form action="http://localhost/stockwise/view/reporteVencido.php" method="post">
+        <form action="http://localhost/stockwise/view/tendero/reporteVencido.php" method="post">
             <input type="submit" value="Generar reporte vencidos">
         </form>
 

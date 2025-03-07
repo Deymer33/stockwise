@@ -1,16 +1,8 @@
 <?php
-require_once '../auth/permisos.php';
-require_once '../model/model.productosVencidos.php';
+require_once __DIR__ . '/../../controller/productosVencidos.controller.php';
 
-ControlAcceso::verificarAcceso('tendero');
-
-$database = new Database();
-$db = $database->getConnection();
-
-// Consulta para obtener los productos vencidos
-$productos = new Exprirados($db);
-
-$productos_vencidos = $productos->productosVencidos();
+$vencidos = new ProductosVencidosController();
+$productos_vencidos = $vencidos->reporteVencido();
 
 ?>
 
@@ -19,7 +11,7 @@ $productos_vencidos = $productos->productosVencidos();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/productosVencidos.css">
+    <link rel="stylesheet" href="../css/productosVencidos.css">
     <title>Productos Vencidos</title>
 </head>
 <body>

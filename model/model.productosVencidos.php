@@ -1,6 +1,5 @@
 <?php
-
-require_once '../config/conexion.php';// Asegúrate de tener acceso a la conexión
+require_once __DIR__ . '../../config/conexion.php'; 
 
 class Exprirados {
 
