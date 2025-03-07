@@ -19,7 +19,7 @@ $vista = $controlador->mostrarVista();
     <div class="dropdown">
         <button>menu</button>
             <div class="dropdown-options">
-                <a href="logout.php">Cerrar Sesión</a>
+                <a href="../logout.php">Cerrar Sesión</a>
             </div>
     </div>
 </header>
