@@ -1,0 +1,111 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.admin-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de encabezado */
+.admin-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(90deg, rgba(0,162,255,1) 0%, rgba(0,122,255,1) 100%);
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #00a2ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 162, 255, 0.2);
+}
+
+button:hover {
+    background-color: #008ace;
+    transform: translateY(-2px);
+}
+
+/* Estilo del enlace dentro del botón */
+button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+button a:hover {
+    color: white;
+}
+
+/* Estilo del enlace "Volver atrás" */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005b99;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    th, td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

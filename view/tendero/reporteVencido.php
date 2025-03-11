@@ -25,7 +25,7 @@ ob_start();
 </head>
 <body>
 <header>
-        <h1>Stockwise</h1>
+        <h1>Stockwise <br> Reporte de productos vencidos </h1>
     </header>
 
     <div class="report-info">

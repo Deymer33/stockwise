@@ -60,11 +60,11 @@ class UsuariosController {
                     $_SESSION['rol'] = $this->model->rol;
 
                     if($_SESSION['rol'] == 'admin'){
-                        header("location: adminMenu.php");
+                        header("location: view/admin/adminMenu.php");
                     } elseif ($_SESSION['rol'] == 'tendero'){
-                        header("location: view/tendero/menuTendero.php"); 
+                        header("location: view/mensajero/mensajero.php"); 
                     } elseif ($_SESSION['rol'] == 'mensajero'){
-                        header("locatio: menudomicilio.php");
+                        header("locatio: view/mensajero/.php");
                     } else {
                     header("location: error.php");
                     }

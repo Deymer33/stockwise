@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../auth/permisos.php';
+require_once __DIR__ . '/../../auth/permisos.php';
 ControlAcceso::verificarAcceso('admin');
 ?>
 
